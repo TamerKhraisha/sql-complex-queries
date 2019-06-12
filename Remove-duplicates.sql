@@ -1,8 +1,9 @@
+-- Say you have a table where col1 and col2 have multiple equal rows and assume that col1 is a primary key or the main column
 
-with distinct_g_funda_gvkeys as
+with table_with_row_number as
 (
-SELECT gvkey,iid,ROW_NUMBER() OVER(PARTITION by gvkey, iid ORDER BY gvkey) 
+SELECT col1,col2,ROW_NUMBER() OVER(PARTITION by col2, col2 ORDER BY col1) 
 AS row_num
-FROM g_funda
+FROM table
 )
-select * from distinct_g_funda_gvkeys where row_num=1
+select * from table_with_row_number where row_num=1
