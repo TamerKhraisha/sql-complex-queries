@@ -1,5 +1,5 @@
 #POSTGRES
-#Create a new column which is the cumulative sum of the total 
+#Create a new column which is the cumulative sum of weights.
 
 
 CREATE TABLE Queue ( id INTEGER, name VARCHAR(20), turn INTEGER, weight INTEGER )
