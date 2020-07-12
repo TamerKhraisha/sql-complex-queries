@@ -1,4 +1,4 @@
-## Assume you have a table with an identifier column and values for each id and assume you want to select the top 3 highest values for each id.
+##Postgres: Assume you have a table with an identifier column and values for each id and assume you want to select the top 3 highest values for each id.
 
 CREATE TABLE dense_rank_example (
 	id INTEGER,
